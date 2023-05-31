@@ -50,3 +50,62 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
+
+/* Container Main */
+.main{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 3vw 60px;
+}
+
+/* Container Heading */
+.container_heading{
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+.heading{
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Container Contents */
+.container_contents{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.card{
+    background: #282828;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1100px) {
+    .container_contents{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container_contents{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container_contents{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .container_contents{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

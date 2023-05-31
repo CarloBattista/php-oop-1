@@ -21,6 +21,13 @@ class Movie {
     }
 }
 
+// Creo un array per poter ciclare in modo dinamico gli elementi in pagina
+$movies = array(
+    $movie1 = new Movie("The Shawshank Redemption", "Drama", 1994),
+    $movie2 = new Movie("Inception", "Science Fiction", 2010),
+    $movie3 = new Movie("Avengers: Endgame", "Fantasy", 2019)
+);
+
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +44,20 @@ class Movie {
 
 <body>
 
-    <div class="container_heading">
-        <h1 class="heading">Movies</h1>
-    </div>
-    <div class="container_contents">
-        <div class="card"></div>
+    <!-- Container Main -->
+    <div class="main">
+        <!-- Container Heading -->
+        <div class="container_heading">
+            <h1 class="heading">Movies</h1>
+        </div>
+        <!-- Container Contents -->
+        <div class="container_contents">
+            <?php foreach ($movies as $elem) { ?>
+                <div class="card">
+                    <?php $elem->displayMovieInfo(); ?>
+                </div>
+            <?php } ?>
+        </div>
     </div>
 
 </body>
