@@ -3,29 +3,29 @@
 class Movie {
     // Variabili d'istanza
     public $title;
-    public $genre;
+    public $genre = array();
     public $year;
 
     // Constructor
-    public function __construct($title, $genre, $year) {
+    public function __construct($title, $genres, $year) {
         $this->title = $title;
-        $this->genre = $genre;
+        $this->genre = $genres;
         $this->year = $year;
     }
 
     // Methods
     public function displayMovieInfo() {
-        echo "Title: " . $this->title . "<br>";
-        echo "Genre: " . $this->genre . "<br>";
-        echo "Year: " . $this->year . "<br>";
+        echo "<h2 class='title_content'>Title: " . $this->title . "</h2>";
+        echo "<h3 class='genres_content'>Genre: " . implode(", ", $this->genre) . "</h3>";
+        echo "<h4 class='year_content'>Year: " . $this->year . "</h4>";
     }
 }
 
 // Creo un array per poter ciclare in modo dinamico gli elementi in pagina
 $movies = array(
-    $movie1 = new Movie("The Shawshank Redemption", "Drama", 1994),
-    $movie2 = new Movie("Inception", "Science Fiction", 2010),
-    $movie3 = new Movie("Avengers: Endgame", "Fantasy", 2019)
+    new Movie("The Shawshank Redemption", array("Drama", "Crime"), 1994),
+    new Movie("Inception", array("Science Fiction", "Thriller"), 2010),
+    new Movie("Avengers: Endgame", array("Action", "Sci-Fi"), 2019)
 );
 
 ?>

@@ -85,6 +85,24 @@ h6 {
     padding: 1em;
 }
 
+h2.title_content{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .2em;
+}
+h3.genres_content{
+    color: #999;
+    font-size: .8rem;
+    font-weight: 400;
+    margin-bottom: .2em;
+}
+h4.year_content{
+    color: #999;
+    font-size: .7rem;
+    font-weight: 400;
+}
+
 /* Media Query */
 @media only screen and (max-width: 1100px) {
     .container_contents{
