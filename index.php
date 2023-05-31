@@ -1,16 +1,25 @@
 <?php
 
-class Movie {
+class Movie
+{
     // Variabili d'istanza
     public $title;
     public $genre;
     public $year;
 }
 
+// Constructor
+public function __construct($title, $genre, $year) {
+    $this->title = $title;
+    $this->genre = $genre;
+    $this->year = $year;
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +28,7 @@ class Movie {
     <!-- CSS -->
     <link rel="stylesheet" href="./_assets/css/main.css">
 </head>
+
 <body>
 
     <div class="container_heading">
@@ -27,6 +37,7 @@ class Movie {
     <div class="container_contents">
         <div class="card"></div>
     </div>
-    
+
 </body>
+
 </html>
