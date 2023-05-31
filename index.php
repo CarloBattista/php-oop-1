@@ -1,18 +1,24 @@
 <?php
 
-class Movie
-{
+class Movie {
     // Variabili d'istanza
     public $title;
     public $genre;
     public $year;
-}
 
-// Constructor
-public function __construct($title, $genre, $year) {
-    $this->title = $title;
-    $this->genre = $genre;
-    $this->year = $year;
+    // Constructor
+    public function __construct($title, $genre, $year) {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->year = $year;
+    }
+
+    // Methods
+    public function displayMovieInfo() {
+        echo "Title: " . $this->title . "<br>";
+        echo "Genre: " . $this->genre . "<br>";
+        echo "Year: " . $this->year . "<br>";
+    }
 }
 
 ?>
